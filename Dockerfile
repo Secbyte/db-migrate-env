@@ -8,5 +8,5 @@ RUN \
     tar -xzf flyway-commandline-${FLYWAY_VERSION}.tar.gz --strip-components=1 && \
     rm flyway-commandline-${FLYWAY_VERSION}.tar.gz && \
     pip install awscli --user --upgrade && \
-    export PATH=~/.local/bin:$PATH && \
+    echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bash_profile && \
     ln -s /flyway/flyway /usr/local/bin/flyway
